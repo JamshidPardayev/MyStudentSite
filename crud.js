@@ -119,6 +119,7 @@ function deleteUser(index) {
   users.splice(index, 1);
   localStorage.setItem("usersKey", JSON.stringify(users));
   read();
+
 }
 
 function resetForm() {
@@ -135,13 +136,13 @@ function read() {
     usersWithIndex.sort((a, b) => a.user.name.localeCompare(b.user.name));
     usersWithIndex.forEach(({ user, index }) => {
       tbody.innerHTML += `
-              <tr class="bg-[white] border-[1px]" onclick="showUserDetails(${index})">
-                  <td class="py-[3px] px-[5px]"><img src="./image/download.png" alt="admin" class="w-[50px] h-[40px] rounded-[50%]"></td>
-                  <td class="inpName py-[3px] px-[5px]">${user.name}</td>
-                  <td class="py-[3px] px-[5px]">${user.email}</td>
-                  <td class="py-[3px] px-[5px]">${user.number}</td>
-                  <td class="py-[3px] px-[5px]">${user.enroll}</td>
-                  <td class="py-[3px] px-[5px]">${user.admissionDate}</td>
+              <tr class="bg-[white] border-[1px]">
+                  <td  onclick="showUserDetails(${index})" class="py-[3px] px-[5px]"><img src="./image/download.png" alt="admin" class="w-[50px] h-[40px] rounded-[50%]"></td>
+                  <td  onclick="showUserDetails(${index})" class="inpName py-[3px] px-[5px]">${user.name}</td>
+                  <td  onclick="showUserDetails(${index})" class="py-[3px] px-[5px]">${user.email}</td>
+                  <td  onclick="showUserDetails(${index})" class="py-[3px] px-[5px]">${user.number}</td>
+                  <td  onclick="showUserDetails(${index})" class="py-[3px] px-[5px]">${user.enroll}</td>
+                  <td  onclick="showUserDetails(${index})" class="py-[3px] px-[5px]">${user.admissionDate}</td>
                   <td class="py-[3px] px-[5px] text-[20px] text-[#0000008A] hover:text-[#ffdb11] cursor-pointer duration-[.3s]"><i class='bx bx-dots-horizontal-rounded'></i></td>
                   <td class="py-[3px] px-[5px]"><button onclick="updateUser(${index})"><i class='bx bx-edit-alt text-[#FEAF00] text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]'></i></button></td>
                   <td class="py-[3px] px-[5px]"><button onclick="deleteUser(${index})"><i class='bx bx-box text-[#FEAF00] text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]'></i></button></td>
