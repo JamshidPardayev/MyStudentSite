@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Profile</title>
+</head>
+<body class="bg-[#f8f8f8]">
+    <div class="profile flex">
+        <div id="profileLeft" class="profileLeft flex flex-col justify-between px-[25px] py-[18px] max-w-[270px] bg-[#F2EAE1] h-[97vh] max-lg:h-[97vh] max-sm:w-[70px] max-sm:p-[3px] ">
+            <div>
+                <h2 class="text-[20px] text-[#000000] font-bold w-[190px] border-l-[#F8D442] border-l-[6px] pl-[12px] max-sm:text-[12px]  max-sm:max-w-[160px]  max-sm:w-[70px] max-sm:pl-[0px]">Admin Students</h2>
+                <div class="profileAdmin mt-[54px] max-w-[141px] mx-auto">
+                    <div class="profileAdminImg max-h-[128px] max-w-[128px] rounded-[50%] mx-auto">
+                        <img src="./image/admin.png" alt="adminImg" class="w-[100%] h-[100%] rounded-[50%]">
+                    </div>
+                    <div class="profileAdminTitle">
+                        <h3 id="adminName" class="mt-[20px] text-center font-bold text-[17px] text-[#000000] max-sm:text-[12px]">Jamshid</h3>
+                        <p class="mt-[10px] text-[14px] font-medium text-[#FEAF00] text-center">Admin</p>
+                    </div>               
+                </div>
+                <div class="profileAdminBtn mt-[63px] mx-auto cursor-pointer flex items-center justify-center rounded-[4px] gap-x-[15px] max-w-[193px] h-[41px] bg-[#FEAF00] hover:bg-[#ffdb11] duration-[.5s]">
+                    <img src="./image/graduation-cap.svg" alt="" class="h-[16px] w-[20px]">
+                    <button id="btnStudent" class=" text-[14px] [#000000] max-sm:hidden">Students</button>
+                </div>
+            </div>
+            <div class="logout max-w-[100px]  mx-auto">
+                <a href="./index.html" class="flex gap-x-[23px] text-center"><p id="logOut" class="max-sm:hidden">logOut</p><img src="./image/logout.png" alt="logout"></a>
+            </div>
+        </div>
+
+        <div class="profileRight w-full">
+            <div class="profileTop flex justify-between items-center h-[10vh] px-[30px] w-[100%] bg-[#F2EAE1]">
+                <i id="leftClose" class='bx bx-reflect-vertical text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]' id="closeOpen"></i>
+                <i class='bx bx-bell text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]'></i>
+            </div>
+
+            <div class="profileBottom px-[30px] bg-[#f8f8f8]">
+                <div class="profileTitle h-[67px]  border-b-[1px] border-b-[#E5E5E5] content-center">
+                    <h3 class="font-bold text-[22px]" id="studentTitleName">Jamshid</h3>
+                </div>
+                <div id="profileCard" class="profileCard max-w-[600px] gap-x-[20px] flex justify-between items-start bg-[white] p-[30px]">
+                    <!-- <div class="cardInfo flex max-sm:flex-col-reverse">
+                        <div class="cardImg max-h-[216px] max-w-[209px] ">
+                            <img src="./image/student.jpg" alt="img" class="w-[100%] h-[100%] rounded-[8px]">
+                        </div>
+                        <div class="cardForm ml-[40px] max-sm:ml-[0px]">
+                            <div class="part">
+                                <h4 class="text-[#ACACAC] text-[12px] font-semibold">Name</h4>
+                                <p id="forName" class="text-[14px] mt-[2px] mb-[15px]">Jamshid</p>
+                            </div>
+                            <div class="part">
+                                <h4 class="text-[#ACACAC] text-[12px] font-semibold">Email</h4>
+                                <p id="forEmail" class="text-[14px] mt-[2px] mb-[15px]">sdfgdfdf</p>
+                            </div>
+                            <div class="part">
+                                <h4 class="text-[#ACACAC] text-[12px] font-semibold">Phone</h4>
+                                <p id="forPhone" class="text-[14px] mt-[2px] mb-[15px]">111111</p>
+                            </div>
+                            <div class="part">
+                                <h4 class="text-[#ACACAC] text-[12px] font-semibold">Date admission</h4>
+                                <p id="forData" class="text-[14px] mt-[2px] mb-[15px]">11111111</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./image/Vector2.svg" alt="vector"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="./profile.js"></script>
+</body>
+</html>

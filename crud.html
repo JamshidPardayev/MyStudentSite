@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Crude</title>
+</head>
+<body class=""> 
+    <div class="crude flex">
+        <div id="crudeLeft" class="crudeLeft flex flex-col justify-between px-[25px] py-[18px] max-w-[270px] bg-[#F2EAE1] h-[97vh] max-lg:h-[97vh]">
+            <div>
+                <h2 class="text-[20px] text-[#000000] font-bold w-[190px] border-l-[#F8D442] border-l-[6px] pl-[12px] max-sm:text-[16px]  max-sm:max-w-[160px]">Admin Students</h2>
+            <div class="crudAdmin mt-[54px] max-w-[141px] mx-auto">
+                <div class="crudAdminImg max-h-[128px] max-w-[128px] rounded-[50%] mx-auto">
+                    <img src="./image/admin.png" alt="adminImg" class="w-[100%] h-[100%] rounded-[50%]">
+                </div>
+                <div class="crudAdminTitle">
+                    <h3 id="adminName" class="mt-[20px] text-center font-bold text-[17px] text-[#000000]">Jamshid</h3>
+                    <p class="mt-[10px] text-[14px] font-medium text-[#FEAF00] text-center">Admin</p>
+                </div>               
+            </div>
+            <div class="crudeAdminBtn mt-[63px] mx-auto cursor-pointer flex items-center justify-center rounded-[4px] gap-x-[15px] max-w-[193px] h-[41px] bg-[#FEAF00] hover:bg-[#ffdb11] duration-[.5s]">
+                <img src="./image/graduation-cap.svg" alt="" class="h-[16px] w-[20px]">
+                <button id="btnStudent" class=" text-[14px] [#000000] ">Students</button>
+            </div>
+            </div>
+            <div class="logout max-w-[100px]  mx-auto">
+                <a href="./index.html" class="flex gap-x-[23px] text-center"><p id="logOut">logOut</p><img src="./image/logout.png" alt="logout"></a>
+            </div>
+        </div>
+        <div class="crudeRight w-full h-[97vh]">
+            <div class="crudTop flex justify-between items-center h-[10vh] px-[30px] w-[100%] bg-[#F2EAE1]">
+                <i id="leftClose" class='bx bx-reflect-vertical text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]' id="closeOpen"></i>
+                <i class='bx bx-bell text-[20px] hover:text-[#ffdb11] cursor-pointer duration-[.3s]'></i>
+            </div>
+            <div class="crudTable px-[30px] bg-[#f8f8f8] h-[87vh] w-full">
+                <div class="crudTitle min-h-[67px] flex justify-between items-center border-b-[1px] border-b-[#E5E5E5] ">
+                    <h2 class="text-[22px] text-[#000000] font-bold max-md:hidden">Students List</h2>
+                    <div class="crudTitleBtn flex items-center gap-x-[30px] max-md:flex-wrap gap-y-[10px] max-md:py-[5px]">
+                        <div class="searchInp flex">
+                            <input id="searchInput"  type="text" placeholder="Search" onkeyup="searchFunction(this)" class="w-[212px] h-[37px] rounded-[8px] bg-[#FFFFFF] px-[13px] placeholder-[#C4C4C4] outline-none">
+                            <i class='bx bx-search bg-[#FFFFFF] w-[30px] h-[37px] ml-[-10px] text-[#C4C4C4] content-center text-center rounded-[8px]'></i>
+                        </div>
+                        <img src="./image/sort.svg" alt="icon" class=" max-md:hidden">
+                        <button id="addBtn" class="w-[200px] h-[44px] bg-[#FEAF00] rounded-[4px] text-[#FFFFFF] hover:bg-[#ffdb11] duration-[.5s] cursor-pointer">ADD NEW STUDENT</button>
+                    </div>
+                </div>
+
+                    <div class="div h-[72vh] max-md:h-[68vh] max-w-[940px] overflow-y-auto overflow-x-auto">
+                        <table class="overflow-x-auto ">
+                            <thead class="h-12 w-full text-sm text-[#ACACAC] font-semibold overflow-x-auto">
+                                <tr>
+                                    <td></td>
+                                    <td class="px-2">Name</td>
+                                    <td class="px-2">Email</td>
+                                    <td class="px-2">Phone</td>
+                                    <td class="px-2">Enroll</td>
+                                    <td class="px-2">Date admission</td>
+                                    <td class="px-2"></td>
+                                    <td class="px-2"></td>
+                                    <td class="px-2"></td>
+                                </tr>
+                            </thead>
+                            <tbody class="w-full overflow-x-auto">
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+     
+    <form action="" class="max-w-[500px] bg-[red] px-[15px] py-[30px] rounded-[20px] absolute bg-[url(/image/back.jpg)] bg-cover top-[100px] duration-[1s] left-[40%] translate-y-[-150%]">
+        <div class="formPart mt-[15px]">
+            <label for="name" class="text-[20px] mt-[10px] font-medium text-[#FFFFFF]">Name</label> <br>
+            <input type="text" id="name" placeholder="Your Name" class="w-[100%] h-[40px] rounded-[20px] bg-[#FFFFFF] my-[4px] px-[8px] outline-none">
+            <p id="nameMis" class="text-[red] hidden">Ma'lomot Kiriting!</p>
+        </div>
+
+        <div class="formPart mt-[15px]">
+            <label for="email" class="text-[20px] mt-[10px] font-medium text-[#FFFFFF]">Email Address</label> <br>
+            <input type="email" id="email" placeholder="Your Email" class="w-[100%] h-[40px] rounded-[20px] bg-[#FFFFFF] my-[4px] px-[8px] outline-none">
+            <p id="emailMis" class="text-[red] hidden">Ma'lomot Kiriting!</p>
+        </div>
+
+        <div class="formPart mt-[15px]">
+            <label for="number" class="text-[20px] mt-[10px] font-medium text-[#FFFFFF]">Phone Number</label> <br>
+            <input type="number" id="number" placeholder="Your Number" class="w-[100%] h-[40px] rounded-[20px] bg-[#FFFFFF] my-[4px] px-[8px] outline-none">
+            <p id="numberMis" class="text-[red] hidden">Ma'lomot Kiriting!</p>
+        </div>
+
+        <div class="formPart mt-[15px]">
+            <label for="enroll" class="text-[20px] mt-[10px] font-medium text-[#FFFFFF]">Enroll Number</label>  <br>
+            <input type="number" id="enroll" placeholder="Your Surname" class="w-[100%] h-[40px] rounded-[20px] bg-[#FFFFFF] my-[4px] px-[8px] outline-none">
+            <p id="enrollMis" class="text-[red] hidden">Ma'lomot Kiriting!</p>
+        </div>
+
+        <div class="btn flex gap-x-[30px] flex-wrap gap-y-[10px] mt-[20px]">
+            <button type="reset" class="w-[150px] h-[40px] bg-[#FEAF00] text-[#FFFFFF] rounded-[15px] hover:bg-[#ffdb11] cursor-pointer">Reset</button>
+            <button type="submit" id="click" class="w-[150px] h-[40px] bg-[#FEAF00] text-[#FFFFFF] rounded-[15px] hover:bg-[#ffdb11] cursor-pointer">Submit</button>
+        </div>
+    </form>
+    
+
+
+
+
+
+    <script src="./crud.js"></script>
+</body>
+</html>
