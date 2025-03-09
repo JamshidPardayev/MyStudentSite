@@ -9,6 +9,8 @@ function read() {
   profileCard.innerHTML = "";
   if (selectedUserIndex !== null) {
     const user = users[selectedUserIndex];
+    const studentName = `${user.name}`;
+    document.getElementById("studentInfo").textContent = `${studentName}`
     
     profileCard.innerHTML += `
       <div class="cardInfo flex max-sm:flex-col-reverse">
